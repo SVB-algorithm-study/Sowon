@@ -18,9 +18,8 @@ def minimumAbsoluteDifference(arr):
     length = len(arr)
     min = sys.maxsize
     
-    for i in range(length):
-        next = i+1 if i != length -1 else 0
-        diff = abs(arr[i] - arr[next])
+    for i in range(length-1):
+        diff = abs(arr[i] - arr[i+1])
         if min > diff:
             min = diff
             
